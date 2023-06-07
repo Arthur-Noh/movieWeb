@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dbKey from './keys/dbKey.js';
 import User from './models/user.js';
 
 const app = express();
@@ -8,10 +9,7 @@ const port = 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const userName = 'arthurNoh';
-const password = 'Dev79*42*27';
-
-mongoose.connect(`mongodb+srv://${userName}:${password}@cluster0.sdvmndh.mongodb.net/?retryWrites=true&w=majority`
+mongoose.connect(`mongodb+srv://${dbKey.userName}:${dbKey.password}@cluster0.sdvmndh.mongodb.net/?retryWrites=true&w=majority`
 ).then(() => {
     console.log('MongoDB Connected...');
 }).catch((error) => {
