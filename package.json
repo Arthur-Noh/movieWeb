@@ -1,0 +1,16 @@
+{
+    "name": "boiler-plate",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Arthur-Noh",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2",
+        "mongoose": "^7.2.2"
+    },
+    "devDependencies": {},
+    "type": "module"
+}
